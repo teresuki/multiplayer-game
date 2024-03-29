@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\NetStruct">
+      <UniqueIdentifier>{0ca6b04f-fb2a-44a0-885b-06820a84053a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NetStruct Header">
+      <UniqueIdentifier>{6074d288-67e7-423a-97f8-938ba539bd19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NetPacketType Header">
+      <UniqueIdentifier>{a38b058f-3045-4d8d-b70f-eb4f49d13579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common Header">
+      <UniqueIdentifier>{f842d39a-2fa9-4f27-9337-36e2794a1f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Serializer Header">
+      <UniqueIdentifier>{fcfd9796-9fc0-46e0-aa8a-1694c3ebc2f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Serializer">
+      <UniqueIdentifier>{42c0571c-c816-4cf4-8e15-d92f5eee3391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NetPacketType">
+      <UniqueIdentifier>{1f8e825b-e8d7-4d6b-b229-8410a1f02841}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NetPacketHandler Header">
+      <UniqueIdentifier>{9c1eb8f5-7078-4930-982f-3c9f111df05e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Serializer.cpp">
+      <Filter>Source Files\Serializer</Filter>
+    </ClCompile>
+    <ClCompile Include="NetPacketMap.cpp">
+      <Filter>Source Files\NetPacketType</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExampleNetStruct.h">
+      <Filter>Header Files\NetStruct Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NetPacketType.h">
+      <Filter>Header Files\NetPacketType Header</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonHeader.h">
+      <Filter>Header Files\Common Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Serializer.h">
+      <Filter>Header Files\Serializer Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NetPacketMap.h">
+      <Filter>Header Files\NetPacketType Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NetPacketHandler.h">
+      <Filter>Header Files\NetPacketHandler Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
