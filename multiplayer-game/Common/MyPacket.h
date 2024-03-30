@@ -1,6 +1,8 @@
 #pragma once
+
+#pragma once
 #include "CommonHeader.h"
-#include <map>
+#include "Packet.h"
 
 enum class MyEnum : uint16
 {
@@ -14,7 +16,7 @@ struct MySmallerStruct
 	std::vector<uint64> multipleInts;
 };
 
-struct MyStruct
+struct MyPacket : public Packet
 {
 	uint32 myInt;
 	MyEnum myEnum;
@@ -23,4 +25,7 @@ struct MyStruct
 	MySmallerStruct mySmallerStruct;
 
 	std::map<int32, std::string> myIntStringMap;
+
+	~MyPacket() = default;
 };
+

@@ -3,25 +3,13 @@
 /// WINDOWS SPECIFICS
 #include <winsock2.h>
 #include <ws2tcpip.h>
-#include <cstring>
 #pragma comment(lib, "Ws2_32.lib")
 
 
-#include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <map>
-#include <memory>
-#include <chrono>
-#include <functional>
-
-
-
-#include "CommonHeader.h"
-#include "ExampleNetStruct.h"
-#include "Serializer.h"
-#include "NetPacketHandler.h"
-
+#include <Common/CommonHeader.h>
+#include <Common/MyPacket.h>
+#include <Common/Serializer.h>
+#include <Common/PacketHandler.h>
 
 
 #define now() std::chrono::steady_clock::now()
@@ -55,20 +43,25 @@ int main()
 {
 	for (int i = 0; i < 10; ++i)
 	{
-		MyStruct clientStruct{ 8457, MyEnum::eOption3, u8"Xin chào thế giới 세계를 향한 Use 不但 而且 for sentences contain both 不但 and 而且", {-10.0f, 3.14f, 0.0001f} };
+		MyPacket clientPacket{};
+		clientPacket.myInt = 8457;
+		clientPacket.myEnum = MyEnum::eOption2;
+		clientPacket.myString = u8"Xin chào thế giới 세계를 향한 Use 不但 而且 for sentences contain both 不但 and 而且";
+		clientPacket.myFloats = { -10.0f, 3.14f, 0.0001f };
+
 		MySmallerStruct smaller{ {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20} };
-		clientStruct.mySmallerStruct = smaller;
+		clientPacket.mySmallerStruct = std::move(smaller);
 
-		clientStruct.myIntStringMap.emplace(std::make_pair(213, "Value String One"));
-		clientStruct.myIntStringMap.emplace(std::make_pair(-10, "Minus Ten"));
+		clientPacket.myIntStringMap.emplace(std::make_pair(213, "Value String One"));
+		clientPacket.myIntStringMap.emplace(std::make_pair(-10, "Minus Ten"));
 
-		auto buffer = Serialize<MyStruct>(clientStruct);
+		auto buffer = Serialize<MyPacket>(clientPacket);
 
 		auto type = IdentifyPacket(buffer.get());
-		if (NetPacketHandlerMap.count(type))
+		if (PacketHandlerMap.count(type))
 		{
 			// invoke packet handler
-			auto& packetHandler = NetPacketHandlerMap.at(type);
+			auto& packetHandler = PacketHandlerMap.at(type);
 			packetHandler(buffer.get());
 		}
 
