@@ -1,4 +1,5 @@
 #pragma once
+#include "CommonHeader.h"
 
 /// <summary>
 /// A pure abstract struct for all packets to inherit from.
@@ -15,3 +16,16 @@ struct Packet
 };
 
 Packet::~Packet() {};
+
+/// <summary>
+/// A pure abstract struct for all packet components to inherit from.
+/// A packet component is a struct that can be serialize but by itself is not a packet that can be sent through network.
+/// A packet component is usually a member of a packet.
+/// </summary>
+struct PacketComponent
+{
+	virtual ~PacketComponent() = 0;
+};
+
+PacketComponent::~PacketComponent() {};
+

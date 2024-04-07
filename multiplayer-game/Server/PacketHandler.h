@@ -1,24 +1,7 @@
-#include "CommonHeader.h"
-#include "Serializer.h"
-#include "MapSerializer.h"
-#include "NetStructExampleSerializer.h"
-#include "PacketName.h"
-
-
-template <typename ReceivedPacket>
-requires std::derived_from<ReceivedPacket, Packet>
-static void OnPacketIdentifiedAs(const char* receivedBuffer)
-{
-	ReceivedPacket ReceivingPacket{};
-	auto [bitseryResult, isSuccess] = Deserialize(ReceivingPacket, receivedBuffer);
-	if (bitseryResult != bitsery::ReaderError::NoError || !isSuccess)
-	{
-		std::cerr << "DESERIALIZATION FAILED";
-		return;
-	}
-
-	OnPacketDeserializedAs<ReceivedPacket>(ReceivingPacket);
-}
+#pragma once
+#include <Common/CommonHeader.h>
+#include <Common/Serializer.h>
+#include <Common/PacketName.h>
 
 static PacketName IdentifyPacket(const char* receivedBuffer)
 {
@@ -27,6 +10,24 @@ static PacketName IdentifyPacket(const char* receivedBuffer)
 	return type;
 }
 
+template <typename ReceivedPacket>
+requires std::derived_from<ReceivedPacket, Packet>
+static void OnPacketIdentifiedAs(const char* receivedBuffer)
+{
+	ReceivedPacket ReceivingPacket{};
+
+	auto start = now();
+	auto [bitseryResult, isSuccess] = Deserialize(ReceivingPacket, receivedBuffer);
+	if (bitseryResult != bitsery::ReaderError::NoError || !isSuccess)
+	{
+		std::cerr << "DESERIALIZATION FAILED\n";
+		return;
+	}
+	auto end = now();
+	std::cout << "Deserialize time: " << (end - start).count() << "ns.\n";
+
+	OnPacketDeserializedAs<ReceivedPacket>(ReceivingPacket);
+}
 
 template <typename Packet>
 static void OnPacketDeserializedAs(const Packet& ReceivedPacket)
@@ -39,6 +40,7 @@ static void OnPacketDeserializedAs<MyPacket>(const MyPacket& ReceivedPacket)
 {
 	std::cout << "Received MyStruct packet from Client!\n";
 }
+
 
 static const std::map<PacketName, std::function<void(char*)>> PacketHandlerMap
 {

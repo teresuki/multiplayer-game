@@ -126,6 +126,9 @@ public:
 
   bool isCompletedSuccessfully() const { return _currOffset == _bufferSize; }
 
+ public:
+  inline bool IsSerialize() { return false; }
+
 private:
   using diff_t = typename std::iterator_traits<TIterator>::difference_type;
 
@@ -243,6 +246,9 @@ public:
   {
     return _currOffset > _biggestCurrentPos ? _currOffset : _biggestCurrentPos;
   }
+
+ public:
+  inline bool IsSerialize() { return true; }
 
 private:
   using TResizable =

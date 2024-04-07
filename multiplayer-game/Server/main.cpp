@@ -9,10 +9,7 @@
 #include <Common/CommonHeader.h>
 #include <Common/MyPacket.h>
 #include <Common/Serializer.h>
-#include <Common/PacketHandler.h>
-
-
-#define now() std::chrono::steady_clock::now()
+#include "PacketHandler.h"
 
 /// WINDOWS SPECIFICS
 void WinAppStartup()
@@ -38,7 +35,6 @@ void ServerStart()
 
 }
 
-
 int main()
 {
 	for (int i = 0; i < 10; ++i)
@@ -47,15 +43,22 @@ int main()
 		clientPacket.myInt = 8457;
 		clientPacket.myEnum = MyEnum::eOption2;
 		clientPacket.myString = u8"Xin chào thế giới 세계를 향한 Use 不但 而且 for sentences contain both 不但 and 而且";
-		clientPacket.myFloats = { -10.0f, 3.14f, 0.0001f };
+		clientPacket.myFloats = { -10.0f, 3.14f, 0.0001f, -202.202f };
 
-		MySmallerStruct smaller{ {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20} };
+		MySmallerStruct smaller{};
+		for (uint64 i = 0; i < 20; ++i)
+		{
+			smaller.multipleInts.push_back(i);
+		}
 		clientPacket.mySmallerStruct = std::move(smaller);
 
 		clientPacket.myIntStringMap.emplace(std::make_pair(213, "Value String One"));
 		clientPacket.myIntStringMap.emplace(std::make_pair(-10, "Minus Ten"));
 
+		auto start = now();
 		auto buffer = Serialize<MyPacket>(clientPacket);
+		auto end = now();
+		std::cout << "Serialize time: " << (end - start).count() << "ns.\n";
 
 		auto type = IdentifyPacket(buffer.get());
 		if (PacketHandlerMap.count(type))
@@ -64,8 +67,8 @@ int main()
 			auto& packetHandler = PacketHandlerMap.at(type);
 			packetHandler(buffer.get());
 		}
-
 	}
 
+	system("pause");
 	return 0;
 }

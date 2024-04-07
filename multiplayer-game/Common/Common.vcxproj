@@ -138,17 +138,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CommonHeader.h" />
-    <ClInclude Include="MapSerializer.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="PacketName.h" />
     <ClInclude Include="MyPacket.h" />
-    <ClInclude Include="NetStructExampleSerializer.h" />
-    <ClInclude Include="PacketHandler.h" />
     <ClInclude Include="Serializer.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="NetStructExampleSerializer.cpp" />
-    <ClCompile Include="Serializer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
