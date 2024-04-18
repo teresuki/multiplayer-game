@@ -13,11 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Serializer">
-      <UniqueIdentifier>{0481825b-ac39-4a01-9892-b82861f5aefe}</UniqueIdentifier>
+    <Filter Include="Serialization">
+      <UniqueIdentifier>{c254af7c-6830-4eb5-80bf-7d8d730338e2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Packet">
+    <Filter Include="Serialization\Packet">
       <UniqueIdentifier>{60d16e08-e96f-462f-9e5b-aa820d35db29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unicode">
+      <UniqueIdentifier>{28b7cc39-aff8-446d-81cb-b04af4e29991}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,16 +28,19 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyPacket.h">
-      <Filter>Header Files\Packet</Filter>
-    </ClInclude>
-    <ClInclude Include="PacketName.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Serializer.h">
-      <Filter>Header Files\Serializer</Filter>
+      <Filter>Serialization\Packet</Filter>
     </ClInclude>
     <ClInclude Include="Packet.h">
-      <Filter>Header Files\Packet</Filter>
+      <Filter>Serialization\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketName.h">
+      <Filter>Serialization\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Serializer.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Unicode.h">
+      <Filter>Unicode</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

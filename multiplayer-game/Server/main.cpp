@@ -7,9 +7,7 @@
 
 
 #include <Common/CommonHeader.h>
-#include <Common/MyPacket.h>
-#include <Common/Serializer.h>
-#include "PacketHandler.h"
+#include "Example.h"
 
 /// WINDOWS SPECIFICS
 void WinAppStartup()
@@ -35,40 +33,12 @@ void ServerStart()
 
 }
 
+
 int main()
 {
-	for (int i = 0; i < 10; ++i)
-	{
-		MyPacket clientPacket{};
-		clientPacket.myInt = 8457;
-		clientPacket.myEnum = MyEnum::eOption2;
-		clientPacket.myString = u8"Xin chào thế giới 세계를 향한 Use 不但 而且 for sentences contain both 不但 and 而且";
-		clientPacket.myFloats = { -10.0f, 3.14f, 0.0001f, -202.202f };
 
-		MySmallerStruct smaller{};
-		for (uint64 i = 0; i < 20; ++i)
-		{
-			smaller.multipleInts.push_back(i);
-		}
-		clientPacket.mySmallerStruct = std::move(smaller);
-
-		clientPacket.myIntStringMap.emplace(std::make_pair(213, "Value String One"));
-		clientPacket.myIntStringMap.emplace(std::make_pair(-10, "Minus Ten"));
-
-		auto start = now();
-		auto buffer = Serialize<MyPacket>(clientPacket);
-		auto end = now();
-		std::cout << "Serialize time: " << (end - start).count() << "ns.\n";
-
-		auto type = IdentifyPacket(buffer.get());
-		if (PacketHandlerMap.count(type))
-		{
-			// invoke packet handler
-			auto& packetHandler = PacketHandlerMap.at(type);
-			packetHandler(buffer.get());
-		}
-	}
-
+	Example::AllDemo();
 	system("pause");
+
 	return 0;
 }

@@ -16,15 +16,24 @@
     <Filter Include="Header Files\PacketHandler">
       <UniqueIdentifier>{961f7f77-6572-444a-af1d-782b0a1cea55}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Example">
+      <UniqueIdentifier>{d91e6b85-977c-4627-a4f8-fc0bc8b203c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Example.cpp">
+      <Filter>Example</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PacketHandler.h">
       <Filter>Header Files\PacketHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Example.h">
+      <Filter>Example</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
