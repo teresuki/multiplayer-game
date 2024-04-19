@@ -113,6 +113,9 @@
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>icuuc.lib;icutu.lib;icutest.lib;icuio.lib;icuin.lib;icudt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>copy $(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\bin64\*.dll $(SolutionDir)$(Platform)\$(Configuration)\</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -133,6 +136,9 @@
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>icuuc.lib;icutu.lib;icutest.lib;icuio.lib;icuin.lib;icudt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>copy $(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\bin64\*.dll $(SolutionDir)$(Platform)\$(Configuration)\</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Example.cpp" />
