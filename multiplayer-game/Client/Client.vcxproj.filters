@@ -13,34 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\PacketHandler">
-      <UniqueIdentifier>{961f7f77-6572-444a-af1d-782b0a1cea55}</UniqueIdentifier>
-    </Filter>
     <Filter Include="_PCH">
-      <UniqueIdentifier>{998e494a-ecfe-4571-9da9-b89eb96a0ede}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Example">
-      <UniqueIdentifier>{d91e6b85-977c-4627-a4f8-fc0bc8b203c6}</UniqueIdentifier>
+      <UniqueIdentifier>{ae92b9b0-b148-4d00-8d2a-f16d012b9c7d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Example.cpp">
-      <Filter>Example</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>_PCH</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PacketHandler.h">
-      <Filter>Header Files\PacketHandler</Filter>
-    </ClInclude>
-    <ClInclude Include="Example.h">
-      <Filter>Example</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>_PCH</Filter>
     </ClInclude>

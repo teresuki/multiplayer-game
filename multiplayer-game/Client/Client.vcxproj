@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{bf7ef43e-4357-49a1-aa0f-ff1b0301d461}</ProjectGuid>
-    <RootNamespace>Server</RootNamespace>
+    <ProjectGuid>{1cdb9ec8-d1fa-4d36-9215-f9a668b996a4}</ProjectGuid>
+    <RootNamespace>Client</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,8 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\include;$(SolutionDir)ThirdParty\enet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\include;$(SolutionDir)ThirdParty\enet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -115,9 +115,6 @@
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>icuuc.lib;icutu.lib;icutest.lib;icuio.lib;icuin.lib;icudt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>copy $(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\bin64\*.dll $(SolutionDir)$(Platform)\$(Configuration)\</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -140,12 +137,8 @@
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>icuuc.lib;icutu.lib;icutest.lib;icuio.lib;icuin.lib;icudt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>copy $(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\bin64\*.dll $(SolutionDir)$(Platform)\$(Configuration)\</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Example.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -154,8 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Example.h" />
-    <ClInclude Include="PacketHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

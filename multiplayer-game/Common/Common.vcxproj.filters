@@ -42,5 +42,8 @@
     <ClInclude Include="Unicode.h">
       <Filter>Unicode</Filter>
     </ClInclude>
+    <ClInclude Include="..\ThirdParty\enet\include\enet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
