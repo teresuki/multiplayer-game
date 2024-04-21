@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\callbacks.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\compress.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\host.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\list.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\packet.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\peer.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\protocol.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\unix.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\win32.c">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\callbacks.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\enet.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\list.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\protocol.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\time.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\types.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\unix.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\utility.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\include\enet\win32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Hoang Dinh\enet-1.3.18\enet-1.3.18\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{A3337017-2C74-3576-AB1E-4EB1C1F44837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{7DC69C1F-FD33-3399-8D46-C7D93A4279E8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

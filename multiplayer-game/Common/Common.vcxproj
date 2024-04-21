@@ -71,11 +71,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\include;$(SolutionDir)ThirdParty\enet\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\lib64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\include;$(SolutionDir)ThirdParty\enet\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)ThirdParty\icu4c-75_1-Win64-MSVC2022\lib64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

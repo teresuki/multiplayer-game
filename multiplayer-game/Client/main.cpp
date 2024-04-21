@@ -1,6 +1,6 @@
 #define ENET_IMPLEMENTATION
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
-#include "enet.h"
+#include <enet/enet.h>
 
 #include <Common/CommonHeader.h>
 int ClientLoop(std::unique_ptr<ENetHost> client, std::unique_ptr<ENetPeer> serverPeer)
