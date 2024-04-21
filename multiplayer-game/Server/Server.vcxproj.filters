@@ -30,9 +30,6 @@
     <ClCompile Include="Example.cpp">
       <Filter>Example</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>_PCH</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PacketHandler.h">
@@ -40,9 +37,6 @@
     </ClInclude>
     <ClInclude Include="Example.h">
       <Filter>Example</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>_PCH</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
