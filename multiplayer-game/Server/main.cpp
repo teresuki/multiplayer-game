@@ -9,7 +9,7 @@
 #include "Example.h"
 #define ENET_IMPLEMENTATION
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
-#include "enet.h"
+#include <enet/enet.h>
 
 /// WINDOWS SPECIFICS
 //void WinAppStartup()
