@@ -22,6 +22,12 @@
     <Filter Include="Example">
       <UniqueIdentifier>{d91e6b85-977c-4627-a4f8-fc0bc8b203c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{630f9fe1-b2fa-4d6f-a4ce-5d783a80eb93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sessions">
+      <UniqueIdentifier>{5b93de39-c4a3-4e94-8352-4636369ea091}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,6 +36,12 @@
     <ClCompile Include="Example.cpp">
       <Filter>Example</Filter>
     </ClCompile>
+    <ClCompile Include="NetworkThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionsThread.cpp">
+      <Filter>Sessions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PacketHandler.h">
@@ -37,6 +49,12 @@
     </ClInclude>
     <ClInclude Include="Example.h">
       <Filter>Example</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkThread.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionsThread.h">
+      <Filter>Sessions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
