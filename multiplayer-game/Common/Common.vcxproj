@@ -149,6 +149,7 @@
     <ClInclude Include="PacketName.h" />
     <ClInclude Include="MyPacket.h" />
     <ClInclude Include="Serializer.h" />
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="Unicode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

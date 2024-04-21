@@ -1,5 +1,3 @@
-#define ENET_IMPLEMENTATION
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include <enet/enet.h>
 
 #include <Common/CommonHeader.h>
