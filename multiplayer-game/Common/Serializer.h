@@ -145,7 +145,8 @@ void serialize(S& s, PacketType& packet)
 
 template <typename SendingPacket>
 requires std::derived_from<SendingPacket, Packet>
-std::unique_ptr<char[]> Serialize(const SendingPacket& InStruct)
+
+std::tuple< std::unique_ptr<char[]>, size_t> Serialize(const SendingPacket& InStruct)
 {
 	using Buffer = std::vector<char>;
 	using OutputAdapter = bitsery::OutputBufferAdapter<Buffer>;
@@ -180,7 +181,7 @@ std::unique_ptr<char[]> Serialize(const SendingPacket& InStruct)
 	// Finally, Copy the payload
 	std::memcpy(sendingBuffer.get() + sizeof(PacketName) + sizeof(payloadSize), payload.data(), payloadSize);
 
-	return sendingBuffer;
+	return std::make_tuple(std::move(sendingBuffer), bufferSize);
 }
 
 template <typename ReceivingPacket>

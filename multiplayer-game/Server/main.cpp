@@ -29,8 +29,11 @@
 //	}
 //}
 
+#include <tracy/Tracy.hpp>
+
 int main()
 {
+	ZoneScoped;
 	NetworkThread::instance().StartThreadAsync();
 	SessionsThread::instance().StartThreadAsync();
 	system("pause");

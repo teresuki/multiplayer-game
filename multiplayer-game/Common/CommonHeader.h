@@ -18,7 +18,6 @@
 #include <atomic>
 
 
-
 // Output Parameter
 #define OutParam	
 

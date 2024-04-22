@@ -36,11 +36,11 @@
     <ClCompile Include="Example.cpp">
       <Filter>Example</Filter>
     </ClCompile>
-    <ClCompile Include="NetworkThread.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SessionsThread.cpp">
       <Filter>Sessions</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkThread.cpp">
+      <Filter>Network</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

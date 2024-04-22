@@ -41,7 +41,7 @@ void Example::SerializationDemo()
 		clientPacket.myIntStringMap.emplace(std::make_pair(-10, "Minus Ten"));
 
 		auto start = now();
-		auto buffer = Serialize<MyPacket>(clientPacket);
+		auto [buffer, bufferSize] = Serialize<MyPacket>(clientPacket);
 		auto end = now();
 		std::cout << "Serialize time: " << (end - start).count() << "ns.\n";
 

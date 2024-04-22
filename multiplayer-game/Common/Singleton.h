@@ -1,4 +1,5 @@
 #pragma once
+#include <tracy/Tracy.hpp>
 
 template <typename T>
 class Singleton
@@ -11,6 +12,7 @@ public:
 
 	static T& instance()
 	{
+		ZoneScoped;
 		static T instance{};
 		return instance;
 	}

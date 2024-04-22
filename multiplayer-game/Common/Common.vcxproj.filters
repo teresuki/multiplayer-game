@@ -22,6 +22,9 @@
     <Filter Include="Unicode">
       <UniqueIdentifier>{28b7cc39-aff8-446d-81cb-b04af4e29991}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tracy">
+      <UniqueIdentifier>{695f22c9-f757-4c37-853f-210b5d70f5f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonHeader.h">
@@ -48,5 +51,13 @@
     <ClInclude Include="Singleton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ThirdParty\tracy\public\TracyClient.cpp">
+      <Filter>Tracy</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet.cpp">
+      <Filter>Serialization\Packet</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

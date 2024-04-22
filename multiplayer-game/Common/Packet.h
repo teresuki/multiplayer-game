@@ -15,7 +15,6 @@ struct Packet
 	virtual ~Packet() = 0;
 };
 
-Packet::~Packet() {};
 
 /// <summary>
 /// A pure abstract struct for all packet components to inherit from.
@@ -27,5 +26,4 @@ struct PacketComponent
 	virtual ~PacketComponent() = 0;
 };
 
-PacketComponent::~PacketComponent() {};
 

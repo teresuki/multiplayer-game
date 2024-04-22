@@ -1,5 +1,4 @@
 #pragma once
-#include "CommonHeader.h"
 
 enum class PacketName : uint32
 {
