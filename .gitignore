@@ -396,3 +396,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Custom gitignore
+multiplayer-game/ThirdParty/enet-1.3.18/build
+
