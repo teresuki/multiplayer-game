@@ -7,7 +7,7 @@
 void NetworkThread::StartThreadAsync()
 {
 	ZoneScoped;
-	m_NetworkThread = std::jthread(&NetworkThread::_Setup, this);
+	m_NetworkThread  = std::jthread(&NetworkThread::_Setup, this);
 }
 
 int NetworkThread::_Setup()
@@ -93,7 +93,8 @@ int NetworkThread::_Loop(std::unique_ptr<ENetHost> server)
 				//	event.peer->address.port);
 
 				event.peer->data = static_cast<void*>(const_cast<char*>("Client Information"));
-				SessionsThread::instance().OnClientConnect(*event.peer);
+				//SessionsThread::instance().OnClientConnect(*event.peer);
+				SessionsThread::instance().OnClientConnectLockFree(*event.peer);
 				break;
 			}
 			case ENET_EVENT_TYPE_RECEIVE:

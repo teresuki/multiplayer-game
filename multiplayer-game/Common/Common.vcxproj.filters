@@ -25,6 +25,12 @@
     <Filter Include="Tracy">
       <UniqueIdentifier>{695f22c9-f757-4c37-853f-210b5d70f5f8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LockFree SPSC Queue">
+      <UniqueIdentifier>{b1651fb5-e008-422e-9623-376aa52b3fc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Schedule">
+      <UniqueIdentifier>{58f0d535-9cdb-413b-a80c-314cf0c4257a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonHeader.h">
@@ -50,6 +56,21 @@
     </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\readerwriterqueue-1.0.6\atomicops.h">
+      <Filter>LockFree SPSC Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\readerwriterqueue-1.0.6\readerwritercircularbuffer.h">
+      <Filter>LockFree SPSC Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\readerwriterqueue-1.0.6\readerwriterqueue.h">
+      <Filter>LockFree SPSC Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="LockFreeSPCSQueue.h">
+      <Filter>LockFree SPSC Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="Schedule.h">
+      <Filter>Schedule</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

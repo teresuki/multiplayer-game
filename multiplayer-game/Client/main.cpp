@@ -37,8 +37,6 @@ int ClientLoop(std::unique_ptr<ENetHost> client, std::unique_ptr<ENetPeer> serve
 
 		/* Create a reliable packet */
 		{
-			for (int i = 0; i < 200; ++i)
-			{
 				MyPacket sendingPacket = TestCreatePacket();
 				ZoneNamedN(Zone_Serialize_Packet_And_Send, "Serialize Packet and Send", true);
 				auto [buffer, bufferSize] = Serialize(sendingPacket);
@@ -50,7 +48,6 @@ int ClientLoop(std::unique_ptr<ENetHost> client, std::unique_ptr<ENetPeer> serve
 				/* enet_host_broadcast (host, 0, packet);         */
 				/* enet_host_broadcast seems useful for server */
 				enet_peer_send(serverPeer.get(), 0, packet);
-			}
 		}
 
 }
@@ -70,10 +67,7 @@ int ClientStart(std::unique_ptr<ENetHost> client)
 	serverAddress.port = 7777;
 
 	/* Initiate the connection, allocatign the two channel 0 and 1 */
-	for (int i = 0; i < 200; ++i)
-	{
-		serverPeerRawPtr = enet_host_connect(client.get(), &serverAddress, 2, 0);
-	}
+	serverPeerRawPtr = enet_host_connect(client.get(), &serverAddress, 2, 0);
 
 	if (serverPeerRawPtr == nullptr)
 	{

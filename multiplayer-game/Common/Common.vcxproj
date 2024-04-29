@@ -115,7 +115,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;TRACY_ENABLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\tracy\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\tracy\public;$(SolutionDir)ThirdParty\readerwriterqueue-1.0.6;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,7 +133,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;TRACY_ENABLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\tracy\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\bitsery-master\include;$(SolutionDir)ThirdParty\tracy\public;$(SolutionDir)ThirdParty\readerwriterqueue-1.0.6;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
@@ -147,10 +147,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\enet\include\enet.h" />
+    <ClInclude Include="..\ThirdParty\readerwriterqueue-1.0.6\atomicops.h" />
+    <ClInclude Include="..\ThirdParty\readerwriterqueue-1.0.6\readerwritercircularbuffer.h" />
+    <ClInclude Include="..\ThirdParty\readerwriterqueue-1.0.6\readerwriterqueue.h" />
     <ClInclude Include="CommonHeader.h" />
+    <ClInclude Include="LockFreeSPCSQueue.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="PacketName.h" />
     <ClInclude Include="MyPacket.h" />
+    <ClInclude Include="Schedule.h" />
     <ClInclude Include="Serializer.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Unicode.h" />
