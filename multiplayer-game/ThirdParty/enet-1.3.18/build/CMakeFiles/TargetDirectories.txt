@@ -1,4 +1,0 @@
-C:/Users/Hoang Dinh/enet-1.3.18/enet-1.3.18/build/CMakeFiles/enet.dir
-C:/Users/Hoang Dinh/enet-1.3.18/enet-1.3.18/build/CMakeFiles/INSTALL.dir
-C:/Users/Hoang Dinh/enet-1.3.18/enet-1.3.18/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Hoang Dinh/enet-1.3.18/enet-1.3.18/build/CMakeFiles/ZERO_CHECK.dir
